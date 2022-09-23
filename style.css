@@ -1,0 +1,68 @@
+body {
+    color: blueviolet;
+    background-size: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    position: relative;
+}
+
+.music_list {
+    position: absolute;
+    top: -40em;
+    left: 50px;
+    height: 100vh;
+    width: 300px;
+    background: blueviolet;
+    transition: .5s;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.nav_item,
+.log {
+    font-size: 50px;
+    display: inline;
+    justify-content: center;
+}
+
+.nav,
+.setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.setting {
+    font-size: 30px;
+    list-style: none;
+}
+
+.main {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.main>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.toggle_tab {
+    top: 0;
+}
+
+
+.timeclock {
+    text-align: center;
+    
+}
