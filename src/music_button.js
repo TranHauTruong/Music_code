@@ -37,15 +37,10 @@ const music_button = (() => {
     console.log("Stop started");
   };
 
-  const next = () => {};
-
-  const pre = () => {};
   return {
     handleEvent,
     play,
     stop,
-    next,
-    pre,
   };
 })();
 

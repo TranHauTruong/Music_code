@@ -1,6 +1,8 @@
 import "./music.js";
 import { music_button } from "./music_button.js";
 import { storage_manager } from "./storage_music.js";
+import lottieWeb from "https://cdn.skypack.dev/lottie-web";
+
 const music_module = (() => {
   const toggle_tab = () => {
     const btn = document.querySelector(".log");
@@ -22,14 +24,13 @@ const music_module = (() => {
     const song = storage_manager.getMusics().map((song, index, array) => {
       return `
       <div class="music-btn">
-        <h3 class="song_${index}">${song.name}</h3>
-        <p class="play" data-song="${index}">Play</p>
-        <p class="stop" data-song="${index}">Stop</p>
-        <audio id="audio" src="img/code.mp3">Nek</audio>
-      </div>
-      `;
+      <h3 class="song_${index}">${song.name}</h3>
+      <p class="play" onclick="music_button.play("#audio")" data-song="${index}">Play</p>
+      <p class="stop" data-song="${index}">Stop</p>
+      <audio id="audio" src="img/code.mp3" preload="metadata">Nek</audio>
+    </div>`;
     });
-    document.querySelector(".music").innerHTML = song.join("");
+    document.querySelector(".music_list").innerHTML = song.join("");
   };
 
   render();
